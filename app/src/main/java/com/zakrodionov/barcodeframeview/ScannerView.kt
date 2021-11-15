@@ -85,7 +85,7 @@ class ScannerView @JvmOverloads constructor(
         drawFrame(canvas)
 
         if (runAnimation) {
-            handler.postDelayed(refreshRunnable, DELAY_MS)
+            postDelayed(refreshRunnable, DELAY_MS)
         }
     }
 
@@ -130,7 +130,7 @@ class ScannerView @JvmOverloads constructor(
     }
 
     fun stopAnimation() {
-        handler.removeCallbacks(refreshRunnable)
+        removeCallbacks(refreshRunnable)
         runAnimation = false
         showLine = false
         reset()
